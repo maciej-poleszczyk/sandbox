@@ -12,14 +12,14 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-west-1
+          aws-region: us-east-1
       - name: Start EC2 runner
         id: start-ec2-runner
         uses: machulav/ec2-github-runner@v2
         with:
           mode: start
           github-token: ${{ secrets.PAT_REPO }}
-          ec2-image-id: "ami-0abdeb283774a31d1"
+          ec2-image-id: "ami-02675d30b814d1daa"
           ec2-instance-type: t2.micro
           subnet-id: "subnet-0a908041af3e555b3"
           security-group-id: "sg-078c66eb27b2a0f2f"
