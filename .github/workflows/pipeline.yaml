@@ -5,8 +5,7 @@ on:
 
 jobs:
   test:
-    runs-on:
-      group: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Start EC2 runner
         id: start-ec2-runner
