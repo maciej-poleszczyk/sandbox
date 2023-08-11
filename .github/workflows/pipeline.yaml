@@ -19,7 +19,7 @@ jobs:
         with:
           mode: start
           github-token: ${{ secrets.PAT_REPO }}
-          ec2-image-id: "x" #
+          ec2-image-id: "ami-0abdeb283774a31d1"
           ec2-instance-type: t2.micro
-          subnet-id: 	"x" #
-          security-group-id: "x" #${{ env.PE_SG }}
+          subnet-id: "subnet-0a908041af3e555b3"
+          security-group-id: "sg-078c66eb27b2a0f2f"
