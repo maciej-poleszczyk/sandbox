@@ -1,20 +1,21 @@
 name: Demo pipeline
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
-  plan:
+  test:
     runs-on:
       group: org/ubuntu-runners
     steps:
-      - name: Running plan
-        run: echo "Running plan"
 
-  apply:
-    runs-on:
-      group: org/ubuntu-runners
-    environment: "Restricted"
-    steps:
-      - name: Running apply
-        run: echo "Running apply"
+      - name: Start EC2 runner
+        id: start-ec2-runner
+        uses: machulav/ec2-github-runner@v2
+        with:
+          mode: start
+          github-token: "x" #
+          ec2-image-id: "x" #
+          ec2-instance-type: t2.micro
+          subnet-id: 	"x" #
+          security-group-id: "x" #${{ env.PE_SG }}
