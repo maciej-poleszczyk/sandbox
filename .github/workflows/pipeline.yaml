@@ -6,9 +6,8 @@ on:
 jobs:
   test:
     runs-on:
-      group: org/ubuntu-runners
+      group: ubuntu-latest
     steps:
-
       - name: Start EC2 runner
         id: start-ec2-runner
         uses: machulav/ec2-github-runner@v2
